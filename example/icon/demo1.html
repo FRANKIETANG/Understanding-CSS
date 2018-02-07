@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>切图</title>
+  <style>
+    .box {
+      float: left;
+      position: relative;
+      left: 50%;
+    }
+
+    .clearfix {
+      zoom: 1;
+    }
+
+    .clearfix::after {
+      content: '';
+      clear: both;
+      visibility: hidden;
+    }
+
+    .icons {
+      width: 100px;
+      height: 100px;
+      overflow: hidden;
+    }
+
+    .box div {
+      float: left;
+      margin: 0 25px;
+      position: relative;
+      right: 50%;
+    }
+
+    .qq img {
+      position: relative;
+      right: 0px;
+    }
+
+    .weixin img {
+      position: relative;
+      right: 400px;
+    }
+
+    .weibo img {
+      position: relative;
+      right: 200px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="box clearfix">
+    <div class="icons qq">
+      <img src="./img/xxx.png" alt="qq">
+    </div>
+    <div class="icons weixin">
+      <img src="./img/xxx.png" alt="weixin">
+    </div>
+    <div class="icons weibo">
+      <img src="./img/xxx.png" alt="weibo">
+    </div>
+  </div>
+</body>
+
+</html>
