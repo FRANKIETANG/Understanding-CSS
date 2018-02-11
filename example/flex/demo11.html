@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    .child {
+      background: white;
+      margin: 5px;
+      width: 100px;
+    }
+
+    .parent {
+      margin-top: 10px;
+    }
+
+    .parent1 {
+      display: flex;
+      background: #ddd;
+      justify-content: space-around;
+      align-items: flex-start;
+    }
+
+    .child:nth-child(3) {
+      align-self: center;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="parent parent1">
+    <div class="child child1">11111
+      <br>1111
+      <br>111
+      <br>11
+      <br>1
+      <br>
+    </div>
+    <div class="child child2">222
+      <br>22
+      <br>2
+      <br>
+    </div>
+    <div class="child child3">3</div>
+  </div>
+</body>
+
+</html>
