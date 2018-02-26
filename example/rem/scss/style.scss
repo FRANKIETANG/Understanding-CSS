@@ -1,0 +1,33 @@
+@function px2rem($px) {
+  @return $px/$designWidth*10+rem;
+  /* 乘以 10 是因为要十分之一 */
+}
+
+$designWidth: 640;
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-size: 16px;
+}
+
+.child {
+  background: #ddd;
+  text-align: center;
+  line-height: px2rem(128);
+}
+
+.child {
+  width: px2rem(256);
+  height: px2rem(128);
+  margin: px2rem(32) px2rem(32);
+  float: left;
+}
+
+.clearfix::after {
+  content: '';
+  clear: both;
+  display: block;
+}
