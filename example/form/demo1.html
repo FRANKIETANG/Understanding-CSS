@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script src="//at.alicdn.com/t/font_580854_xop6qltxaepcik9.js"></script>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    *::before,
+    *::after {
+      box-sizing: border-box;
+    }
+
+    ul,
+    ol {
+      list-style: none;
+    }
+
+    body {
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .icon {
+      width: 1em;
+      height: 1em;
+      vertical-align: -0.15em;
+      fill: currentColor;
+      overflow: hidden;
+    }
+
+    .wrapper {
+      display: flex;
+      position: relative;
+    }
+
+    .suggestion {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      display: none;
+    }
+
+    .suggestion {
+      border-right: 1px solid #b8b8b8;
+      border-left: 1px solid #b8b8b8;
+      border-bottom: 1px solid #b8b8b8;
+      width: 540px;
+    }
+
+    .suggestion li {
+      color: #000;
+      font: 14px arial;
+      line-height: 25px;
+      padding: 0 8px;
+      position: relative;
+      cursor: default;
+    }
+
+    .suggestion li:hover {
+      background-color: #F0F0F0;
+    }
+
+    .suggestion.active {
+      display: block;
+    }
+
+    .input-wrapper {
+      position: relative;
+      display: inline-block;
+    }
+
+    .float-btn {
+      position: absolute;
+      right: 0;
+      top: 0;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-right: 10px;
+      color: #b8b8b8;
+    }
+
+    .float-btn .split-line {
+      width: 0;
+      height: 16px;
+      border-left: 1px solid;
+      margin: 0 10px;
+    }
+
+    .input-wrapper {
+      float: left;
+    }
+
+    .input-wrapper+button {
+      float: left;
+    }
+
+    .input-wrapper+button {
+      cursor: pointer;
+      background: #3988fb;
+      border: none;
+      font-size: 14px;
+      color: white;
+      padding: 0 20px;
+      line-height: 40px;
+    }
+
+    .input-wrapper+button:focus {
+      outline: none;
+    }
+
+    .input-wrapper+button:hover {
+      box-shadow: 1px 1px 1px 0 rgba(0, 0, 0, 0.2);
+      background: #3781f0;
+    }
+
+    .input-wrapper input[type=text] {
+      border: 1px solid #b8b8b8;
+      width: 540px;
+      height: 40px;
+      line-height: 35px;
+      padding-left: 8px;
+      font-size: 16px;
+    }
+
+    .input-wrapper input[type=text]:focus {
+      outline: none;
+      border-color: #4b94fc;
+    }
+
+    .input-wrapper svg.icon {
+      width: 20px;
+      height: 20px;
+      fill: #b8b8b8;
+    }
+
+    .input-wrapper svg.icon:hover {
+      fill: #4b94fc;
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrapper">
+    <span class="input-wrapper">
+      <input id="keyword" type="text" autocomplete="off">
+      <span class="float-btn">
+        <svg class="icon">
+          <use xlink:href="#icon-ic_mic"></use>
+        </svg>
+        <span class="split-line"></span>
+        <svg class="icon">
+          <use xlink:href="#icon-iccamera"></use>
+        </svg>
+      </span>
+    </span>
+    <button>百度一下</button>
+    <ul id="suggestion" class="suggestion">
+      <li>
+        <b>选项1</b>
+      </li>
+      <li>
+        <b>选项2</b>
+      </li>
+      <li>
+        <b>选项3</b>
+      </li>
+      <li>
+        <b>选项4</b>
+      </li>
+    </ul>
+  </div>
+  <script>
+    keyword.oninput = function (e) {
+      let value = keyword.value
+      if (value) {
+        suggestion.classList.add('active')
+      } else {
+        suggestion.classList.remove('active')
+      }
+    }
+  </script>
+</body>
+
+</html>
